@@ -75,10 +75,10 @@ Este playbook asegura que el servicio de Grafana esté en ejecución e intenta c
 
 
 Si el problema persiste, revisa los siguientes puntos:
-1.Logs de Grafana: Revisa los logs de Grafana para cualquier mensaje de error relacionado. Los logs generalmente se encuentran en /var/log/grafana/grafana.log.
+**1.Logs de Grafana:** Revisa los logs de Grafana para cualquier mensaje de error relacionado. Los logs generalmente se encuentran en /var/log/grafana/grafana.log.
 
-2.Logs de Ansible: Aumenta la verbosidad de tu comando de Ansible para obtener más detalles sobre el fallo.
+**2.Logs de Ansible:** Aumenta la verbosidad de tu comando de Ansible para obtener más detalles sobre el fallo.
 ```
 ansible-playbook -i inventario tu_playbook.yml -vvv
 ```
-3.Variables de Entorno: A veces, las variables de entorno pueden afectar la ejecución de grafana-cli. Asegúrate de que cualquier variable de entorno necesaria esté configurada correctamente dentro de la tarea de Ansible.
+**3.Variables de Entorno:** A veces, las variables de entorno pueden afectar la ejecución de grafana-cli. Asegúrate de que cualquier variable de entorno necesaria esté configurada correctamente dentro de la tarea de Ansible.
