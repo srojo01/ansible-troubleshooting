@@ -99,5 +99,5 @@ CHEQUEAR ESTO:
 
 - name: change admin password for grafana gui
   shell : "grafana-cli admin reset-admin-password {{ grafana_admin_password }}"
-**	register: __command_admin
-	changed_when: __command_admin.rc !=0**
+  register: __command_admin
+  changed_when: __command_admin.rc !=0
