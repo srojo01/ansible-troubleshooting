@@ -23,7 +23,7 @@ Si este comando falla, puede proporcionar mensajes de error más específicos qu
 
 **4. Verificar Permisos:** Asegúrate de que el usuario que ejecuta el playbook de Ansible tenga los permisos necesarios para ejecutar grafana-cli. Puede que necesites usar sudo en tu tarea de Ansible.
 
-**5. Actualizar el Playbook de Ansible:** Modifica tu tarea de Ansible para incluir become: yes y así ejecutar el comando con privilegios elevados.
+**5. Actualizar el Playbook de Ansible:** Modifica tu tarea de Ansible para incluir **become: yes** y así ejecutar el comando con privilegios elevados.
 ```
 - name: change admin password for grafana GUI
   become: yes
@@ -83,3 +83,21 @@ Si el problema persiste, revisa los siguientes puntos:
 ansible-playbook -i inventario tu_playbook.yml -vvv
 ```
 **3.Variables de Entorno:** A veces, las variables de entorno pueden afectar la ejecución de grafana-cli. Asegúrate de que cualquier variable de entorno necesaria esté configurada correctamente dentro de la tarea de Ansible.
+
+
+
+Comandos muy usados:
+```
+ansible-playbook -i inventario tu_playbook.yml -vvv
+```
+
+CHEQUEAR ESTO:
+**38 : PE MONITORING - GRAFANA INSTALLATION**
+
+**change the default password for admin user**
+
+
+- name: change admin password for grafana gui
+  shell : "grafana-cli admin reset-admin-password {{ grafana_admin_password }}"
+**	register: __command_admin
+	changed_when: __command_admin.rc !=0**
