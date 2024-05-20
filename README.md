@@ -75,6 +75,7 @@ Este playbook asegura que el servicio de Grafana esté en ejecución e intenta c
 
 
 Si el problema persiste, revisa los siguientes puntos:
+
 **1.Logs de Grafana:** Revisa los logs de Grafana para cualquier mensaje de error relacionado. Los logs generalmente se encuentran en /var/log/grafana/grafana.log.
 
 **2.Logs de Ansible:** Aumenta la verbosidad de tu comando de Ansible para obtener más detalles sobre el fallo.
